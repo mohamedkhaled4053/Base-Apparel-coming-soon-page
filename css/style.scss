@@ -69,11 +69,29 @@ main{
                 height: 100%;
                 right: 0;
                 transition: 0.2s;
-                box-shadow: 0 10px 20px hsl(0deg 93% 68% / 32%);
+                box-shadow: 0 6px 15px hsl(0deg 100% 22% / 35%);
                 cursor: pointer;
 
                 &:hover{
                     background:  linear-gradient(135deg, rgba(248, 191, 191, 0.7), rgba(238, 140, 140, 0.7));
+                }
+            }
+
+
+            &+p{
+                display: none;
+            }
+            &.error{
+                input{
+                    border: solid rgb(255 0 0 / 50%) 3px;
+                    background: url(../images/icon-error.svg) no-repeat;
+                    background-position: center right 120px;
+                }
+                &+p{
+                    display: block;
+                   color: red;
+                   margin:10px 20px 0; 
+                   text-align: start;
                 }
             }
         }
@@ -123,9 +141,4 @@ main{
             display: none;
         }
     }
-
-
-
-
-
 }
